@@ -15,6 +15,10 @@ class TodoItems extends Component {
     );
   }
 
+  delete(key) {
+    this.props.delete(key);
+  }
+
   render() {
     var todoEntries = this.props.entries;
     var listItems = todoEntries.map(this.createTasks);
