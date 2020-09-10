@@ -24,6 +24,10 @@ class TodoList extends Component {
         };
       });
     }
+
+    this._inputElement.value = " ";
+
+    console.log(this.state.itms);
   }
 
   render() {
@@ -32,7 +36,7 @@ class TodoList extends Component {
         <div className="header">
           <form onSubmit={this.addItem}>
             <input
-              ref={(e) => (this._inputElement = a)}
+              ref={(a) => (this._inputElement = a)}
               placeholder="Enter task"
             />
             <button type="submit">add</button>
