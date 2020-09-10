@@ -6,7 +6,7 @@ class TodoList extends Component {
       <div className="todoListMain">
         <div className="header">
           <form>
-            <Input placeholder="Enter task"></Input>
+            <input placeholder="Enter task" />
             <button type="submit">add</button>
           </form>
         </div>
