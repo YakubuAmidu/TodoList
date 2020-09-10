@@ -36,8 +36,15 @@ class TodoList extends Component {
   }
 
   deleteItem(key) {
+    console.log("Key in deleteItem: " + key);
+    console.log("Items at delete: " + this.state.items);
+
     var filteredItems = this.state.item.filter(function (item) {
       return item.key !== key;
+    });
+
+    this.setState({
+      items: filteredItems,
     });
   }
 
