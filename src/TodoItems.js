@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class TodoItems extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class TodoItems extends Component {
   }
 
   delete(key) {
-    console.log("Key is: " + key);
+    console.log('Key is: ' + key);
     this.props.delete(key);
   }
 
@@ -24,7 +24,7 @@ class TodoItems extends Component {
     var todoEntries = this.props.entries;
     var listItems = todoEntries.map(this.createTasks);
 
-    return <ul className="theList">{listItems}</ul>;
+    return <ul className='theList'>{listItems}</ul>;
   }
 }
 

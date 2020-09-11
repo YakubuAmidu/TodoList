@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import TodoItems from "./TodoItems";
-import "./TodoList.css";
+import React, { Component } from 'react';
+import TodoItems from './TodoItems';
+import './TodoList.css';
 
 class TodoList extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class TodoList extends Component {
   }
 
   addItem(e) {
-    if (this._inputElement.value !== " ") {
+    if (this._inputElement.value !== ' ') {
       var newItem = {
         text: this._inputElement.value,
         key: Date.now(),
@@ -28,7 +28,7 @@ class TodoList extends Component {
       });
     }
 
-    this._inputElement.value = " ";
+    this._inputElement.value = ' ';
 
     console.log(this.state.itms);
 
@@ -36,10 +36,10 @@ class TodoList extends Component {
   }
 
   deleteItem(key) {
-    console.log("Key in deleteItem: " + key);
-    console.log("Items at delete: " + this.state.items);
+    console.log('Key in deleteItem: ' + key);
+    console.log('Items at delete: ' + this.state.items);
 
-    var filteredItems = this.state.item.filter(function (item) {
+    var filteredItems = this.state.items.filter(function (item) {
       return item.key !== key;
     });
 
@@ -50,14 +50,14 @@ class TodoList extends Component {
 
   render() {
     return (
-      <div className="todoListMain">
-        <div className="header">
+      <div className='todoListMain'>
+        <div className='header'>
           <form onSubmit={this.addItem}>
             <input
               ref={(a) => (this._inputElement = a)}
-              placeholder="Enter task"
+              placeholder='Enter task'
             />
-            <button type="submit">add</button>
+            <button type='submit'>add</button>
           </form>
         </div>
         <TodoItems entries={this.state.items} delete={this.deleteItem} />
