@@ -29,6 +29,13 @@
   margin-bottom: 15px;
   border-radius: 5px;
   list-style: none;
+
+  transition: background-color 0.2s ease-out;
+}
+
+.todoListMain .theList li:hover {
+  background-color: pink;
+  cursor: pointer;
 }
 
 ul .theList {
